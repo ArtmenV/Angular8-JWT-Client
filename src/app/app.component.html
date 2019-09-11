@@ -1,0 +1,23 @@
+<div class="container">
+  <nav>
+    <ul>
+      <li><a routerLink="/">NgJWT</a></li>
+    </ul>
+    <ul>
+      <li *ngIf="!userStatus"><a routerLink="/signup">SignUp</a></li>
+      <li *ngIf="!userStatus"><a routerLink="/login">Login</a></li>
+      <li *ngIf="userStatus"><button (click)="logout()">Logout</button></li>
+    </ul>
+  </nav>
+  <header>
+   <div>
+      <h1>Angular / Node <br/> JWT Auth</h1>
+   </div>
+   <div class="image"></div>
+  </header>
+  
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+  
+  </div>
